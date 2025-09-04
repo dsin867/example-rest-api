@@ -15,7 +15,7 @@ export default class ProductController {
     async createProduct(req, res, next) {
         try {
             const product = req.body;
-            ProductValidator.validateCreate(product);
+            ProductValidator.validateCreatePayload(product);
             await this.productDao.createProduct(product);
             res.status(200).json(product);
         }

@@ -2,7 +2,7 @@
 import { ValidationError } from '../errors/api-error.js';
 
 export class ProductValidator {
-  static validateCreate(product) {
+  static validateCreatePayload(product) {
     if (!product.product_id || typeof product.product_id !== 'number') {
       throw new ValidationError("Product id is required and must be a number.");
     }
@@ -16,7 +16,7 @@ export class ProductValidator {
     }
   }
 
-  static validateUpdate(product) {
+  static validateUpdatePayload(product) {
     if (product.name !== undefined && typeof product.name !== 'string') {
       throw new ValidationError("If provided, product name must be a string.");
     }
