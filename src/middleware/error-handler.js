@@ -14,5 +14,5 @@ export function errorHandler(err, req, res, next) {
     errorResponse.statusCode = err.statusCode;
   }
  
-  res.status(statusCode).json(errorResponse);
+  res.status(errorResponse.statusCode).json(errorResponse);
 }
