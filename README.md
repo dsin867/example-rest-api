@@ -1,4 +1,4 @@
-# Products API
+# Products API (Demo)
 ## API for managing products
 
 ---
