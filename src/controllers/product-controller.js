@@ -20,6 +20,8 @@ export default class ProductController {
             res.status(200).json(product);
         }
         catch(error) {
+            // you can log your error here and return an error response
+            // or pass this error to a global error handler (middleware) the way this is done below:
             next(error);
         }
     }
